@@ -1,0 +1,171 @@
+#include <iostream>
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~Building a Text Adventure~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+// Topic: Agents of S.H.I.E.L.D.
+
+int main() {
+
+// Variables
+  int answer1;
+  int answer2;
+  int answer3;
+  int answer4;
+
+  int shield = 0;
+  int hydra = 0;
+  int ssr = 0;
+
+  int max = 0;
+  std::string agency;
+//Beginning: Joining S.H.I.E.L.D.
+
+// Eagle
+  std::cout << "          _______\\               /_______ \n";
+  std::cout << "       _____\\____ \\      ___    / ____/_____ \n";
+  std::cout << "     ____\\______ \\_\\    | ___\\ /_/ ______/____ \n";
+  std::cout << "    ___\\_______ \\__\\\\___| |___//__/ _______/___ \n";
+  std::cout << "      \\_______ \\__ \\ \\v v v v/ / __/ _______/ \n";
+  std::cout << "         \\____\\___\\_\\_\\v v v/_/_/___/____/ \n";
+  std::cout << "                  /  / \\v v/ \\  \\ \n";
+  std::cout << "                 |__/  /\\v/\\  \\__| \n";
+  std::cout << "                   |__/ /|\\ \\__| \n";
+  std::cout << "                     |_/\\_/\\_| \n\n";
+
+  std::cout << "||||||||||||||||||||||||||||||||||||||||||||||||||| \n";
+  std::cout << "|||||||||||| Welcome to S.H.I.E.L.D.! ||||||||||||| \n";
+  std::cout << "||||||||||||||||||||||||||||||||||||||||||||||||||| \n";
+  std::cout << "|||||| Please choose your field of interest: |||||| \n";
+  std::cout << "||||||||||||||||||||||||||||||||||||||||||||||||||| \n";
+  std::cout << "--------------------------------------------------- \n";
+  std::cout << "1) S.H.I.E.L.D. Academy of Operations ||||||||||||| \n";
+  std::cout << "2) S.H.I.E.L.D. Academy of Science and Technology | \n";
+  std::cout << "--------------------------------------------------- \n";
+  std::cout << "||||||||||||||||||||||||||||||||||||||||||||||||||| \n";
+
+  std::cin >> answer1;
+
+  if (answer1 == 1) {
+    std::cout << "You will be joining Agent Ward and Agent May in the S.H.I.E.L.D Ops Division \n\n";
+    shield++;
+    ssr++;
+  }
+  else if (answer1 == 2) {
+    std::cout << "You will be joining Agent Simmons and Agent Fitz in the S.H.I.E.L.D. SciTech Division \n\n";
+    hydra++;
+    ssr++;
+  }
+  else {
+    std::cout << "Invalid response, Please start again \n\n";
+  }
+
+//Branch 1: Who do you prefer to work for?
+  std::cout << "Who do you prefer to work for? \n\n";
+  std::cout << "1) Phillip Coulson \n";
+  std::cout << "2) John Garrett \n";
+  std::cout << "3) Peggy Carter \n";
+
+  std::cin >> answer2;
+
+  if (answer2 == 1) {
+    std::cout << "Ask him about the Avengers \n\n";
+    shield++;
+  }
+  else if (answer2 == 2) {
+    std::cout << "Interesting choice... \n\n";
+    hydra++;
+  }
+  else if (answer2 == 3) {
+    std::cout << "One of the first agents around! \n\n";
+    ssr++;
+  }
+  else {
+    std::cout << "Invalid response, Please start again \n\n";
+  }
+
+//Branch 2: Which high level member do you 
+  std::cout << "Which high level member do you look up to the most? \n\n";
+  std::cout << "1) Colonel Chester Phillps \n";
+  std::cout << "2) Director Nick Fury \n";
+  std::cout << "3) Secretary Alexander Pierce \n";
+
+  std::cin >> answer3;
+
+  if (answer3 == 1) {
+    std::cout << "He was Captain America's commanding officer \n\n";
+    ssr++;
+  }
+  else if (answer3 == 2) {
+    std::cout << "Unfortunately he succumbed to his injuries \n\n";
+    shield++;
+  }
+  else if (answer3 == 3) {
+    std::cout << "... Hail Hydra??? - Nevermind \n\n";
+    hydra++;
+  }
+  else {
+    std::cout << "Invalid response, Please start again \n\n";
+  }
+
+  //Branch 3
+  std::cout << "Female badass \n\n";
+  std::cout << "1) Aida (Madam Hydra) \n";
+  std::cout << "2) Daisy Johnson (Quake) \n";
+  std::cout << "3) Peggy Carter \n";
+
+  std::cin >> answer4;
+
+  if (answer4 == 1) {
+    std::cout << "Really? She was pretty dark and an ANDROID \n\n";
+    hydra++;
+  }
+  else if (answer4 == 2) {
+    std::cout << "Yeah she's pretty badass and the first female superhero... technically \n\n";
+    shield++;
+  }
+  else if (answer4 == 3) {
+    std::cout << "Agreed she was fearless and helped with the SSR which later turned to S.H.I.E.L.D. \n\n";
+    ssr++;
+  }
+  else {
+    std::cout << "Invalid response, Please start again \n\n";
+  }
+
+  // Tally 
+  if (shield > max) {
+
+    max = shield;
+    agency = "S.H.I.E.L.D";
+  }
+
+  if (hydra > max) {
+
+    max = hydra;
+    agency = "Hydra";
+  }
+
+  if (ssr > max) {
+    max = ssr;
+    agency = "Strategic Science Reserve";
+  }
+
+    std::cout << "Welcome to " << agency << "\n";
+  
+  for (int i = 0; i < 20; i++) {
+
+    std::cout << "||||||||||||||||||    END OF TRANSMISSION    ||||||||||||||||||\n";
+  }
+  std::cout << "\n\n"
+  std::cout << "          _______\\               /_______ \n";
+  std::cout << "       _____\\____ \\      ___    / ____/_____ \n";
+  std::cout << "     ____\\______ \\_\\    | ___\\ /_/ ______/____ \n";
+  std::cout << "    ___\\_______ \\__\\\\___| |___//__/ _______/___ \n";
+  std::cout << "      \\_______ \\__ \\ \\v v v v/ / __/ _______/ \n";
+  std::cout << "         \\____\\___\\_\\_\\v v v/_/_/___/____/ \n";
+  std::cout << "                  /  / \\v v/ \\  \\ \n";
+  std::cout << "                 |__/  /\\v/\\  \\__| \n";
+  std::cout << "                   |__/ /|\\ \\__| \n";
+  std::cout << "                     |_/\\_/\\_| \n\n";
+  }
